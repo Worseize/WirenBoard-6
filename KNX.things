@@ -1,0 +1,54 @@
+//TUNNEL
+Bridge knx:ip:bridge [
+    type="TUNNEL",
+    ipAddress="192.168.10.238",
+    portNumber=3671,
+    localIp="192.168.10.238",
+    readingPause=50,
+    responseTimeout=10,
+    readRetriesLimit=3,
+    autoReconnectPeriod=60,
+    localSourceAddr="0.0.0"
+] {
+
+    Thing device topology_1_1_1 [
+        address="1.1.1",
+        fetch=true,
+        pingInterval=300,
+        readInterval=3600
+    ] {
+         Type switch : relaySwitch "relaySwitch" [ ga="2/0/1+<2/1/1" ]
+    }
+
+    Thing device topology_1_1_2 [
+        address="1.1.2",
+        fetch=true,
+        pingInterval=300,
+        readInterval=3600
+    ] {
+         Type dimmer : relayDimmer "relayDimmer" [ switch="1.002:3/0/1+<3/1/1", position="5.001:3/2/1+<3/3/1", increaseDecrease="3.007:3/4/1" ]
+    }
+
+    Thing device topology_1_1_3 [
+        address="1.1.3",
+        fetch=true,
+        pingInterval=300,
+        readInterval=3600
+    ] {
+         Type number : currentTemperature 	"currentTemperature"  [ ga="9.001:<8/0/1" ]
+         Type number : setpointTemperature 	"setpointTemperature" [ ga="9.001:8/1/1+<8/2/1" ]
+         Type string : currentMode          "currentMode"         [ ga="20.105:<8/7/2" ]
+         Type string : targetMode           "targetMode"          [ ga="20.105:8/7/1" ]
+         Type switch : heatingMode 			"heatingMode"         [ ga="1.003:8/3/1" ]
+         Type switch : coolingMode 			"coolingMode"         [ ga="1.003:8/3/2" ]
+    }
+    Thing device topology_1_1_4 [
+        address="1.1.4",
+        fetch=true,
+        pingInterval=300,
+        readInterval=3600
+    ] {
+        Type rollershutter : relayRollershutter "relayRollershutter" [ upDown="4/0/1", stopMove="4/1/1", position="4/2/1+<4/3/1" ]
+    }
+
+}
