@@ -1,2 +1,0 @@
-Group    gBlind   "relayRollershutter"    
-Rollershutter relayRollershutter  "relayRollershutter" <rollershutter> (gBlind) { channel="knx:device:bridge:topology_1_1_4:relayRollershutter" , homekit="WindowCovering, WindowCovering.CurrentPosition, WindowCovering.TargetPosition, WindowCovering.PositionState"}
