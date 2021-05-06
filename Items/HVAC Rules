@@ -1,0 +1,12 @@
+Если user отправил HEAT на HVAC control в HOMEKIT, то 
+-отправляем 0 на cooling mode ,
+-отправляем 1 на heating mode ,
+-отправляем HEAT на HVAC control status.
+Если user отправил COOL на HVAC control в HOMEKIT, то 
+-отправляем 0 на heating mode ,
+-отправляем 1 на cooling mode ,
+-отправляем COOL на HVAC control status.
+Если user отправил OFF на HVAC control в HOMEKIT, то 
+-отправляем 0 на heating mode ,
+-отправляем 0 на cooling mode ,
+-отправляем OFF на HVAC control status.
