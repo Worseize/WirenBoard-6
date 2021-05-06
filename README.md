@@ -1,7 +1,7 @@
 # SmartHome
 Voice control
 
--------
+-----
 Напоминаю про место на диске ограничено , поэтому WB6 должен иметь больше памяти для этого переносим системные файлы на флэш USB1
 clear wirenboard 
 fdisk -l
@@ -50,3 +50,12 @@ After=network-online.target
 лечил такой командой в течении 5 минут вылечилось:
 
 systemctl restart wb-rules
+
+
+
+-------
+RESET PAIRINGS
+https://www.openhab.org/docs/administration/console.html
+ssh -p 8101 openhab@localhost
+1) pass for root
+2) The default username/password is openhab:habopen, so enter habopen at the password prompt.
