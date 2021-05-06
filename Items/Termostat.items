@@ -1,0 +1,7 @@
+Group  gThermostat         "Thermostat"     			                 { homekit = "Thermostat"}
+Number currentTemperature  "Temperature"   <temperature>  (gThermostat)  { channel="knx:device:bridge:topology_1_1_3:currentTemperature"  , homekit = "CurrentTemperature"}
+Number setpointTemperature "Temperature"   <temperature>  (gThermostat)  { channel="knx:device:bridge:topology_1_1_3:setpointTemperature" , homekit = "TargetTemperature"}
+String currentMode         "currentMode"                  (gThermostat)  { channel="knx:device:bridge:topology_1_1_3:currentMode"         , homekit = "CurrentHeatingCoolingMode" [OFF="OFF", HEAT="HEAT", COOL="COOL"]}
+String targetMode          "targetMode"                   (gThermostat)  { channel="knx:device:bridge:topology_1_1_3:targetMode"          , homekit = "TargetHeatingCoolingMode"  [OFF="OFF", HEAT="HEAT", COOL="COOL"]}
+Switch coolingMode 		   "coolingMode" 								 { channel="knx:device:bridge:topology_1_1_3:coolingMode"}
+Switch heatingMode 		   "heatingMode"  								 { channel="knx:device:bridge:topology_1_1_3:heatingMode"}

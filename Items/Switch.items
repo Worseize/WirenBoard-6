@@ -1,0 +1,1 @@
+Switch relaySwitch "Light [%s]" <light> {channel="knx:device:bridge:topology_1_1_1:relaySwitch", homekit="Lighting"}
