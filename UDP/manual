@@ -1,0 +1,2 @@
+Скачиваем утилиту для связи по UDP
+apt-get install netcat
