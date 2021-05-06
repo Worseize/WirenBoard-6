@@ -1,1 +1,0 @@
-Dimmer relayDimmer "Dimmer [%d %%]" <light> {channel="knx:device:bridge:topology_1_1_2:relayDimmer", homekit="Lighting, Lighting.Brightness"}
