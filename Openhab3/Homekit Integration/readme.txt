@@ -1,3 +1,4 @@
+#
 -----
 RESET PAIRINGS  
 https://www.openhab.org/docs/administration/console.html  
