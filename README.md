@@ -24,7 +24,7 @@ Voice control via Openhab + Homekit integration
     PATH=$PATH:$JAVA_HOME/bin  
 -----
 
-В консоле прописываем  
+В консоли прописываем  
 -----
     source /etc/profile  
     reboot  
@@ -39,6 +39,7 @@ Voice control via Openhab + Homekit integration
 /usr/lib/systemd/system/openhab.service
 
 -----
+
 Его надо переместить сюда:  
 -----
 /lib/systemd/system
@@ -46,26 +47,30 @@ Voice control via Openhab + Homekit integration
     /bin/systemctl daemon-reload
     /bin/systemctl stop openhab.service
     /bin/systemctl disable openhab.service
+-----
 
-Теперь для запуска OH пользуемся сокращённой командой
-systemctl daemon-reload
-systemctl enable openhab.service
-systemctl start openhab.service
-===========================
-Вот это убрать внутри файла: ПОКА ЧТО ЭТО НЕ ТОЧНО , ЛУЧШЕ ОСТАВИТЬ ПОКА НЕ БУДУТ ПРОБЛЕМЫ (ЕСЛМ ОТВАЛИВАЕТСЯ ПОСТОЯННО СЕРВИС , ТО УБРАТЬ)
-After=network-online.target
-===========================
+Теперь для запуска OH пользуемся сокращённой командой  
+-----
+    systemctl daemon-reload  
+    systemctl enable openhab.service  
+    systemctl start openhab.service  
+
+
+-----
+
+Вот это убрать внутри файла: ПОКА ЧТО ЭТО НЕ ТОЧНО , ЛУЧШЕ ОСТАВИТЬ ПОКА НЕ БУДУТ ПРОБЛЕМЫ (ЕСЛИ ОТВАЛИВАЕТСЯ ПОСТОЯННО СЕРВИС , ТО УБРАТЬ)
+-----
+     After=network-online.target  
+-----
 
 Возможны ошибки с загрузкой скриптов из за разного формата данных openhab отправляет всегда string , а wirenboard хочет bolean для switch 
-лечил такой командой в течении 5 минут вылечилось:
-
-systemctl restart wb-rules
-
-
-
--------
-RESET PAIRINGS
-https://www.openhab.org/docs/administration/console.html
-ssh -p 8101 openhab@localhost
-1) pass for root
-2) The default username/password is openhab:habopen, so enter habopen at the password prompt.
+лечил такой командой в течении 5 минут вылечилось:  
+-----
+    systemctl restart wb-rules  
+-----
+RESET PAIRINGS  
+https://www.openhab.org/docs/administration/console.html  
+-----
+    ssh -p 8101 openhab@localhost  
+    1) pass for root  
+    2) The default username/password is openhab:habopen, so enter habopen at the password prompt.  
