@@ -1,5 +1,5 @@
 Adding Devices and communicate with them via Smartbus Protocol 
-1) Rules.js file should be in web UI in folder (/rules)
+1) Put Rules.js file on web UI rules web page
 
 You should create additionally communication files in linux (wirenBoard controller)
 1) Control file (/var/Smartbus/smartbusControl.sh)
