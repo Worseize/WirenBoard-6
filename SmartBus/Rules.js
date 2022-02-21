@@ -117,7 +117,7 @@ defineVirtualDevice("hdl", {
 defineRule("hdl_incoming", {
   whenChanged: "hdl/data",
   then: function(newValue, devName, cellName) {
-    runShellCommand('bash /var/udp/smartbusControl.sh ' +newValue);
+    runShellCommand('bash /var/Smartbus/smartbusControl.sh ' +newValue);
   }
 });
 
