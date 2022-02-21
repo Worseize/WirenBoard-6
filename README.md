@@ -3,7 +3,7 @@ Voice control via Openhab + Homekit integration
 
 -----
 Место на диске ограничено , поэтому WB6 должен иметь больше памяти для этого переносим системные файлы на флэш USB1
-clear wirenboard 
+'''clear wirenboard '''
 fdisk -l
 df -h
 
