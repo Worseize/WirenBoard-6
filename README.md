@@ -2,15 +2,13 @@
 Voice control via Openhab + Homekit integration
 
 -----
-Место на диске ограничено , поэтому WB6 должен иметь больше памяти для этого переносим системные файлы на флэш USB1
-''' bash
-clear wirenboard '''
-fdisk -l
-df -h
-
-mount /usr and /var
-chmod -R 754 /usr and /var
-/etc/fstab.wb редактируем добавляя требование автоматического монтирования флэшки при перезагрузках и выключениях
+Место на диске ограничено , поэтому WB6 должен иметь больше памяти для этого переносим системные файлы на флэш USB1  
+    clear wirenboard  
+    fdisk -l  
+    df -h  
+    mount /usr and /var  
+    chmod -R 754 /usr and /var  
+/etc/fstab.wb редактируем добавляя требование автоматического монтирования флэшки при перезагрузках и выключениях  
 -----
 
 apt install -y openjdk-11-jre
