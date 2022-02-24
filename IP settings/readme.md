@@ -1,8 +1,10 @@
 Wifi IP address by default 192.168.42.1  
 Connect via mobaXterm  
-Check current lan IP address (eth0 or eth1)  
+Check current lan IP address (eth0 or eth1)
+-----
     ifconfig  
-
+    
+    
 /etc/network/interfaces  
 -----
     auto lo  
