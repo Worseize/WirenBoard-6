@@ -8,5 +8,5 @@ RESET PAIRINGS
     2) The default username/password is openhab:habopen, so enter habopen at the password prompt.  
 -----
 
-openhab Web UI --> wirenboard IP:8080 --> settings --> homekit (easy setup)  
+openhab Web UI --> wirenboard IP:8080 --> settings --> homekit (easy setup) --> Most important setting is Wirenboard IP address 
 -----
