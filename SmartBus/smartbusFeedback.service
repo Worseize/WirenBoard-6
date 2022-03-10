@@ -1,0 +1,8 @@
+[Unit]
+Description= Listen smartbus Feedback
+
+[Service]
+ExecStart=/mnt/Smartbus/smartbusFeedback.sh
+
+[Install]
+WantedBy=multi-user.target
