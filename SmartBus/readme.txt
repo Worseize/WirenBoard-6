@@ -23,3 +23,5 @@ or just channels can`t set off soo quickly it does not matter why because we hav
 systemctl daemon-reload  
 systemctl enable smartbusFeedback.service  
 systemctl start smartbusFeedback.service  
+
+apt-get install mosquitto-clients
