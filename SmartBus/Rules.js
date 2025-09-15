@@ -123,7 +123,7 @@ defineRule("hdl_incoming", {
 
 
 
-/***Create virtual bus for listening feedbacks from linux bash script /var/udp/smartbusFeedback.sh***/
+/***Create virtual bus for listening feedbacks from linux bash script /mnt/Smartbus/smartbusFeedback.sh***/
 defineVirtualDevice("hdl-listen", {
   title: "wb-hdl-listen",
   cells: {
