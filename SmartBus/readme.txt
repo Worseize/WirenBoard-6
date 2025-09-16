@@ -19,7 +19,7 @@ soo change time to 0002 if you got same error.
 I think it could be soo , because we have wrong crc table probably  
 or just channels can`t set off soo quickly it does not matter why because we have solution on that problem. 
 
-5) smartbusFeedback.service must be in /lib/systemd/system/smartbusFeedback.service directory  
+5) smartbusFeedback.service must be in /etc/systemd/system/smartbusFeedback.service directory  
 systemctl daemon-reload  
 systemctl enable smartbusFeedback.service  
 systemctl start smartbusFeedback.service  
