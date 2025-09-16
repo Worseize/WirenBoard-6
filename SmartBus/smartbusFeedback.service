@@ -1,8 +1,14 @@
 [Unit]
-Description= Listen smartbus Feedback
+Description= Listen SmartBus Feedback Service
+After=network.target
 
 [Service]
-ExecStart=/mnt/Smartbus/smartbusFeedback.sh
+Type=simple
+User=root
+WorkingDirectory=/mnt/Smartbus/
+ExecStart=/bin/bash /mnt/Smartbus/smartbusFeedback.sh
+Restart=always
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
